@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<a href ="yours?name=김학경&age=22"> to yours</a>
+	
+</body>
+</html>

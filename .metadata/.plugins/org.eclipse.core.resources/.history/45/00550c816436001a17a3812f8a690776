@@ -1,0 +1,18 @@
+package kr.co.ca;
+
+public class MemberDAO {
+	private static final String DRIVER = "oracle.jdbc.OracleDriver";
+	private static final String url = "jdbc:oracle:thin:@localhost:1521:xe";
+	private static final String user = "ca";
+	private static final String password = "ca";
+	
+	public public MemberDAO() {
+		// TODO Auto-generated constructor stub
+		try {
+			Class.forName(DRIVER);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+}
+

@@ -1,0 +1,9 @@
+INDEX VERSION 1.131
+C:\workspace_java601_jsp\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2574618016.index
+\HiWorld\src
+C:\workspace_java601_jsp\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3212841647.index
+\Test01142\src
+C:\workspace_java601_jsp\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2830615768.index
+\HelloWorld\src
+C:\workspace_java601_jsp\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1296863604.index
+\HiWorld\src
