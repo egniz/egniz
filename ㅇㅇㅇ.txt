@@ -1,0 +1,13 @@
+어플리케이션 : 저장개채 , 누적방문자수 측정용으로 사용됨
+Listeneri : 사용 예 : 보안프로그램을 켤때 끌때도 용이함
+
+chain.doFilter 기준 밑으로는 response 
+                       기준 위로는 request
+
+
+url-pattern 종류
+1. 디렉토리 패턴 : "  /  " 로 시작
+2. 확장자형 패턴 : *.확장자 (예시 : *.exe)
+
+view = ui
+controller = servelt으로 작업
