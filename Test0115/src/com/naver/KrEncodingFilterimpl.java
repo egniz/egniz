@@ -10,15 +10,15 @@ import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
 
 /**
- * Servlet Filter implementation class MyFilter
+ * Servlet Filter implementation class KrEncodingFilterimpl
  */
-//@WebFilter("/MyFilter")
-public class MyFilterimpl implements Filter {
+//@WebFilter("/KrEncodingFilterimpl")
+public class KrEncodingFilterimpl implements Filter {
 
     /**
      * Default constructor. 
      */
-    public MyFilterimpl() {
+    public KrEncodingFilterimpl() {
         // TODO Auto-generated constructor stub
     }
 
@@ -33,13 +33,9 @@ public class MyFilterimpl implements Filter {
 	 * @see Filter#doFilter(ServletRequest, ServletResponse, FilterChain)
 	 */
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
-		// TODO Auto-generated method stub
-		// place your code here
-
-		// pass the request along the filter chain
-		System.out.println("filter1 request");
+		request.setCharacterEncoding("euc-kr");
+		response.setContentType("text/html;charset=euc-kr");
 		chain.doFilter(request, response);
-		System.out.println("filter1 response");
 	}
 
 	/**

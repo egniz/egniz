@@ -10,15 +10,15 @@ import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
 
 /**
- * Servlet Filter implementation class MyFilter
+ * Servlet Filter implementation class YourFilterimpl
  */
-//@WebFilter("/MyFilter")
-public class MyFilterimpl implements Filter {
+//@WebFilter("/YourFilterimpl")
+public class YourFilterimpl implements Filter {
 
     /**
      * Default constructor. 
      */
-    public MyFilterimpl() {
+    public YourFilterimpl() {
         // TODO Auto-generated constructor stub
     }
 
@@ -37,9 +37,9 @@ public class MyFilterimpl implements Filter {
 		// place your code here
 
 		// pass the request along the filter chain
-		System.out.println("filter1 request");
+		System.out.println("filter2 request");
 		chain.doFilter(request, response);
-		System.out.println("filter1 response");
+		System.out.println("filter2 response");
 	}
 
 	/**
