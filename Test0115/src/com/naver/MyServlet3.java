@@ -34,11 +34,16 @@ public class MyServlet3 extends HttpServlet {
 		System.out.println(cPath);
 		String what = uri.substring(cPath.length());
 		
+		Command com = null;
+		
 		if(what.equalsIgnoreCase("/insert.do")) {
+			com = new InsertCommand();
 			System.out.println("inserting");
 		} else if(what.equalsIgnoreCase("/select.do")) {
+			com = new SelectCommand();
 			System.out.println("selecting");
 		} else if(what.equalsIgnoreCase("/insertui.do")) {
+			com = new InsertUICommand();
 			System.out.println("forward to insertui file");
 		}
 		
