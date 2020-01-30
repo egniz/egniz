@@ -14,11 +14,12 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-		id:${dto.id }<br>
-		name:${dto.name }<br>
-		age: ${dto.age }<br>
-		<a href="updateui.do?id=${dto.id}">수정</a>
-		<a href="delete.do?id=${dto.id}">삭제</a>
-		<a href="list.do">목록</a>
+	<h1>회원 정보 수정</h1>
+	<form action="update.do" method="post">
+	id: <input name="id" readonly value="${dto.id }"><br>
+	name:<input required="required" name="name" value="${dto.name }"><br>
+	age:<input name="age" value="${dto.age }" type="number"><br>
+	<input type="submit" value="수정">
+	</form>
 </body>
 </html>

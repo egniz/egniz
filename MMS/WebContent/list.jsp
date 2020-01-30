@@ -21,5 +21,9 @@
 <c:forEach items="${list }" var="var">
 	${var.id }  <a href="read.do?id=${var.id}">${var.name }</a><br>
 </c:forEach>
+
+<div>
+<a href="insertui.do">±Û¾²±â</a>
+</div>
 </body>
 </html>

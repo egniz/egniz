@@ -41,14 +41,28 @@ public class FrontController extends HttpServlet {
 			com = new LogoutCommand();
 		} else if(what.equalsIgnoreCase("/read.do")) {
 			com = new ReadComand();
+		} else if(what.equalsIgnoreCase("/updateui.do")) {
+			com = new UpdateUiCommand();
+		} else if(what.equalsIgnoreCase("/update.do")) {
+			com = new UpdateCommand();
+		} else if(what.equalsIgnoreCase("/insertui.do")) {
+			com = new InsertUiCommand();
+		} else if(what.equalsIgnoreCase("/insert.do")) {
+			com = new InsertCommand();
+		} else if(what.equalsIgnoreCase("/checkid.do")) {
+			com = new CheckIdCommand();
+		} else if(what.equalsIgnoreCase("/delete.do")) {
+			com = new DeleteCommand();
 		}
 		
 		if(com!= null) {
 			CommandAction action = com.execute(request, response);
-			if(action.isRedirect()) {
-				response.sendRedirect(action.getWhere());
-			} else {
-				request.getRequestDispatcher(action.getWhere()).forward(request, response);
+			if (action != null) {
+				if (action.isRedirect()) {
+					response.sendRedirect(action.getWhere());
+				} else {
+					request.getRequestDispatcher(action.getWhere()).forward(request, response);
+				} 
 			}
 			
 		}

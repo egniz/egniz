@@ -14,11 +14,36 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-		id:${dto.id }<br>
-		name:${dto.name }<br>
-		age: ${dto.age }<br>
-		<a href="updateui.do?id=${dto.id}">수정</a>
-		<a href="delete.do?id=${dto.id}">삭제</a>
-		<a href="list.do">목록</a>
+	<h1> 회원 등록</h1>
+	<form action="insert.do" method="post">
+		id:<input required name="id"><button>중복확인</button>
+		<p></p>	
+		name:<input required name="name"><br>
+		age:<input required name="age" type="number"><br>
+		<input type="submit" value="등록"> 
+	
+	</form>
+	
+	<script type="text/javascript">
+	$(document).ready(function() {
+		
+		$("button").click(function() {
+			var id = $("input[name='id']").val();
+			$.ajax({
+				type:'get',
+				url :'checkid.do',
+				data:{
+					id : id
+				},
+				datatype:'text',
+				success : function(result){
+					$("p").text(result);					
+				}
+			});
+			
+		});
+		
+	});
+	</script>
 </body>
 </html>
